@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alex Brush">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|Poppins">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='styles.css' rel='stylesheet'>
+    <title>Auroras and Alluring Fiction</title>
+    <style>
+        .left{   
+            float: left;
+            position: absolute;
+            margin: 0;
+            top: 60px;
+            left: 0;
+            z-index: 1;
+            width: 0;
+            background-color: rosybrown;
+            color: snow;
+            text-align: center;
+            transition: 0.5s;
+            overflow-x: hidden;
+        }
+
+        .left .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            text-decoration: none;
+            color: #333;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .right {
+            width: 80%;
+            background-color: lavenderblush;
+            color: dimgrey;
+            opacity: 0.8;
+            margin:auto;
+        }
+
+        @media screen and (max-width: 800px) {
+        .right {   
+      width: 100%;
+      padding: 0;
+      height:100%;
+    }
+  }
+
+    </style>
+</head>
+<body> 
+        <ul>
+            <li><a  href="home.html">HOME</a></li>
+            <li><a class="active" href="#">BLOGS</a></li>
+            <li><a href="featured.html">FEATURED</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li style="float:right"><button id="myBtn" style="background-color: #d9bfbf; font-weight: 900; padding:10px; font-family: Poppins, sans-serif; border: #333;">SUBSCRIBE</button></li>
+        </ul>
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Subscribe to Our Weekly Newsletter</h2>
+              </div>
+              <div class="modal-body">
+                <p>Thank you for visiting my blog-'Auroras And Alluring Fiction'.
+                    To stay updated on all blogs, subscribe to our weekly mails below:</p>
+                    <p>E-Mail Address: <input type="email"><i style="font-size:20px" class="fa fa-paper-plane"></i></p>
+              </div>
+            </div>
+          
+        </div>
+
+        <script>
+            // Get the modal
+            var modal = document.getElementById("myModal");
+            
+            // Get the button that opens the modal
+            var btn = document.getElementById("myBtn");
+            
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+            
+            // When the user clicks the button, open the modal 
+            btn.onclick = function() {
+              modal.style.display = "block";
+            }
+            
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+              modal.style.display = "none";
+            }
+            
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
+            </script>
+        <div id="leftnav" class="left">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="profile">
+                <h1>About Me</h1>
+                <img src="me.jpeg" alt="Me">
+                <p>Hii, I'm Dishika Mehta, a college student with dark academia aesthetic and a serious problem of escapism!</p>
+                <div class="button">
+                    <a href="#">VIEW PROFILE</a>
+                </div>
+            </div>
+            <div class="profile">
+                <div class="archive">
+                    <h1>Popular Blogs</h1>
+                        <a href="blog1.html">> Pipe Dreams and Maneuvering through Life</a>
+                        <a href="blog7.html">> One of Us is Lying and the Unspoken Social Media Ambiguity</a>
+                        <a href="blog4.html">> You Asked for Perfect and Unrealistic Expectations</a>
+                        <a href="blog6.html">> Aristotle and Dante Discover the Secrets of the Universe and Self-Acceptance</a>
+                        <a href="blog5.html">> Darius the Great Is Not Okay and Achieving Individuation</a>
+                </div>
+                <div class="button">
+                    <a href="blog.html">VIEW ALL</a>
+                </div>
+            </div>
+            <div class="profile">
+                <h1>Follow Me</h1>
+                <a href="https://www.facebook.com/dishika.mehta.5/" target="_blank" class="fa fa-facebook"></a>
+                <a href="https://twitter.com/Dishika94051228" target="_blank" class="fa fa-twitter"></a>
+                <a href="https://www.tumblr.com/blog/andriel-foxes" target="_blank" class="fa fa-tumblr"></a>
+                <a href="https://www.linkedin.com/in/dishika-mehta-a303281a6" target="_blank" class="fa fa-linkedin"></a>
+                <a href="https://www.instagram.com/dishika_mehta/" target="_blank" class="fa fa-instagram"></a>
+            </div>
+            <div class="links">
+                <a href="javascript:void(0)" style="float: right; padding:20px;" onclick="closeNav()">CLOSE</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="header"> 
+                <span style="font-size:30px;cursor:pointer; float: left;" onclick="openNav()">&#9776;</span>  
+                <h1>Auroras and Alluring Fiction</h1>
+                <p style="font-size: 20px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">A literary blog that takes you a journey through the books I've read and how they've left a lasting impact:
+                an exuberant amalgamation of the learning experiences that they bring and how living vicariously can 
+                teach you so much about life- the undeniably complex yet beautiful adventure.</p>
+            </div>
+            <div class="right" style="margin-top: 20px;">
+                <div class="links" style="padding-left:20px;">
+                    <a href="blog.html"><i class="fa fa-arrow-circle-left" style="font-size:36px;"></i></a>
+                    <h1 style="display: inline; padding-left:10px; font-family:fantasy;">BLOGS </h1>
+                </div>
+                <div class="card">
+                    <h1>You Asked for Perfect and Unrealistic Expectations
+                        <div class="dropdown">
+                            <i class="fa fa-share-alt"></i>
+                            <div class="dropdown-content">
+                            <a href="#">Copy Link</a>
+                            <a href="#">Facebook</a>
+                            <a href="#">E-Mail</a>
+                            </div>
+                          </div>
+                    </h1>
+                    <img src="blog4.png" alt="blog4">
+                    <p>"If I don't have perfect grades, then who am I?" You're human? Geez. Dealing with academic pressure and 
+                    stress and how to remind yourself about what actually matters in life amidst it all. "No one told me I'd have 
+                    to know every answer to every test and also be a 'unique individual' following my life's calling at seventeen." 
+                    You Asked For Perfect is a story is about a young high school boy, Ariel Stone who's been a disciplined 
+                    perfectionist his whole life; with <span style="opacity: 0.5;">straight A's...</span></p>
+                    <a href="blog4.html">READ MORE</a>
+                </div>
+                <div class="card">
+                    <h1>Darius the Great Is Not Okay and Achieving Individuation
+                        <div class="dropdown">
+                            <i class="fa fa-share-alt"></i>
+                            <div class="dropdown-content">
+                            <a href="#">Copy Link</a>
+                            <a href="#">Facebook</a>
+                            <a href="#">E-Mail</a>
+                            </div>
+                          </div>
+                    </h1>
+                    <img src="blog5.jpg" alt="blog5">
+                    <p>The subtle art of dealing with the diversities of one's family and heritage and learning to identify and 
+                    accept the uniqueness of one's mind, body and soul despite it all. So who is Darius the Great and why is he 
+                    not okay?  Darius is just an American-Persian boy living his life in the shadows, avoiding the attention of 
+                    'Soulless Minions of Orthodoxy' who make fun of his name and heritage. Being meek and shy, he tries to let 
+                    it go instead of standing up to them <span style="opacity: 0.5;">which makes his...</span></p>
+                    <a href="blog5.html">READ MORE</a>
+                </div>
+                <div class="card">
+                    <h1 style="font-size: 30px;">Aristotle and Dante Discover the Secrets of the Universe and Self-Acceptance
+                        <div class="dropdown">
+                            <i class="fa fa-share-alt"></i>
+                            <div class="dropdown-content">
+                            <a href="#">Copy Link</a>
+                            <a href="#">Facebook</a>
+                            <a href="#">E-Mail</a>
+                            </div>
+                          </div>
+                    </h1>
+                    <img src="blog6.jpg" alt="blog6">
+                    <p>Defying Gender Norms and Taking Pride in  One's Own Identity  Learning to be Unafraid of Rediscovering 
+                    Yourself  Aristotle and Dante Discover the Secrets of the Universe   is an intricate journey of two 
+                    Mexican-American boys- Aristotle and Dante in the peak age of fifteen, trying to find authenticity in a 
+                    world where everything is predefined and yet so much is unknown.  "Sometimes I thought that being fifteen 
+                    was the worst tragedy of all."  Aristotle "Ari" Mendoza <span style="opacity: 0.5;">constantly felt...</span></p>
+                    <a href="blog6.html">READ MORE</a>
+                </div> 
+                <div class="card">
+                    <h1 style="font-size: 30px;">Radio Silence and Platonic Relationships
+                        <div class="dropdown">
+                            <i class="fa fa-share-alt"></i>
+                            <div class="dropdown-content">
+                            <a href="#">Copy Link</a>
+                            <a href="#">Facebook</a>
+                            <a href="#">E-Mail</a>
+                            </div>
+                          </div>
+                    </h1>
+                    <img src="blog8.1.jpg" alt="blog8">
+                    <p>"I think everyone's a bit bored with boy-girl romances anyway; I think the world's had enough of those, to be 
+                    honest." Radio Silence is one of those books which starts off as something cliched, you expect the obvious to 
+                    happen: boy meets girl, they're like minded and bond with each other and they fall in love. But there's an 
+                    unlikely twist that you'll never see coming!   So what exactly is the story about then, you ask? Well, the 
+                    story starts off with Frances Javier, an academically motivated Head Girl who has based every decision of her 
+                    life towards the accomplishment of her <span style="opacity: 0.5;">
+                    crystal clear goal...</span></p>
+                    <a href="blog8.html">READ MORE</a>
+                </div>
+                <div class="center">
+                    <div class="pagination">
+                        <a href="blog.html">&laquo;</a>
+                        <a href="blog.html">1</a>
+                        <a href="page2.html" class="active">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#">&raquo;</a>
+                    </div>
+                    <div class="links">
+                        <a href="#top"><i class="fa fa-arrow-circle-up" style="font-size:36px; float: right; padding:20px;"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            function openNav() {
+            document.getElementById("leftnav").style.width = "100%";
+            document.getElementById("main").style.marginTop = "300px";
+            }
+            
+            function closeNav() {
+            document.getElementById("leftnav").style.width = "0";
+            document.getElementById("main").style.marginTop= "0";
+            }
+        </script>
+
+        <div class="footer">
+            <div class="footer footer-container">
+                <h3>Useful Links:</h3>
+                <div class="links">
+                    <p><a  href="home.html">> Home</a></p>
+                    <p><a href="blog.html">> Blogs</a></p>
+                    <p><a href="featured.html">> Featured</a></p>
+                    <p><a href="contact.html">> Contact</a></p>
+                </div>
+            </div>
+            <div class="footer footer-container">
+                <h3>Follow Me:</h3>
+                <a href="https://www.facebook.com/dishika.mehta.5/" target="_blank" class="fa fa-facebook"></a>
+                <a href="https://twitter.com/Dishika94051228" target="_blank" class="fa fa-twitter"></a>
+                <a href="https://www.tumblr.com/blog/andriel-foxes" target="_blank" class="fa fa-tumblr"></a>
+                <a href="https://www.linkedin.com/in/dishika-mehta-a303281a6" target="_blank" class="fa fa-linkedin"></a>
+                <a href="https://www.instagram.com/dishika_mehta/" target="_blank" class="fa fa-instagram"></a>
+                <h3>Connect via E-Mail:</h3>
+                <div class="links">
+                    <i style="font-size:24px" class="fa">&#xf0e0;</i><a style="display: inline;" href="mailto:dishikamehta@gmail.com"> dishikamehta@gmail.com</a>
+                </div>
+            </div>
+            <div class="footer footer-container">
+                <h3>Subscribe to Our Newsletter!</h3>
+                <p style="color: grey;">Thank you for visiting my blog-<i><span style="color: black;">'Auroras And Alluring Fiction'</span></i>. 
+                To stay updated on all blogs, subscribe to our weekly mails below:</p>
+                <p>E-Mail Address: <input type="email"><i style="font-size:20px" class="fa fa-paper-plane"></i></p>
+            </div>
+        </div>
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alex Brush">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|Poppins">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='styles.css' rel='stylesheet'>
+    <title>Auroras and Alluring Fiction</title>
+    <style>
+        .left{   
+            float: left;
+            position: absolute;
+            margin: 0;
+            top: 60px;
+            left: 0;
+            z-index: 1;
+            width: 0;
+            background-color: rosybrown;
+            color: snow;
+            text-align: center;
+            transition: 0.3s;
+            overflow-x: hidden;
+        }
+
+        .left .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            text-decoration: none;
+            color: #333;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .right {
+            width: 80%;
+            background-color: lavenderblush;
+            color: dimgrey;
+            opacity: 0.8;
+            margin:auto;
+        }
+
+        .blog {
+            padding: 10px;
+            margin:20px;
+            background-color:snow;
+            border-radius: 10px;
+            border: 5px solid wheat;
+            box-shadow: 5px 5px tan;
+        }
+
+        .blog a {
+            font-family: Poppins, sans-serif;
+            text-decoration: none;
+            color: rosybrown;
+        }
+
+        @media screen and (max-width: 800px) {
+        .right, .blog img {   
+            width: 100%;
+            padding: 0;
+            height:100%;
+        }
+  }
+
+    </style>
+</head>
+<body> 
+        <ul>
+            <li><a  href="home.html">HOME</a></li>
+            <li><a class="active" href="blog.html">BLOGS</a></li>
+            <li><a href="merch.html">MERCH</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li style="float:right"><button id="myBtn" style="background-color: #d9bfbf; font-weight: 900; padding:10px; font-family: Poppins, sans-serif; border: #333;">SUBSCRIBE</button></li>
+        </ul>
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Subscribe to Our Weekly Newsletter</h2>
+              </div>
+              <div class="modal-body">
+                <p>Thank you for visiting my blog-'Auroras And Alluring Fiction'.
+                    To stay updated on all blogs, subscribe to our weekly mails below:</p>
+                    <p>E-Mail Address: <input type="email"><i style="font-size:20px" class="fa fa-paper-plane"></i></p>
+              </div>
+            </div>
+          
+        </div>
+
+        <script>
+            // Get the modal
+            var modal = document.getElementById("myModal");
+            
+            // Get the button that opens the modal
+            var btn = document.getElementById("myBtn");
+            
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+            
+            // When the user clicks the button, open the modal 
+            btn.onclick = function() {
+              modal.style.display = "block";
+            }
+            
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+              modal.style.display = "none";
+            }
+            
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
+            </script>
+        <div id="leftnav" class="left">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="profile">
+                <h1>About Me</h1>
+                <img src="me.jpeg" alt="Me">
+                <p>Hii, I'm Dishika Mehta, a college student with dark academia aesthetic and a serious problem of escapism!</p>
+                <div class="button">
+                    <a href="contact.html">VIEW PROFILE</a>
+                </div>
+            </div>
+            <div class="profile">
+                <div class="archive">
+                    <h1>Popular Blogs</h1>
+                    <a href="blog1.html">> Pipe Dreams and Maneuvering through Life</a>
+                    <a href="blog7.html">> One of Us is Lying and the Unspoken Social Media Ambiguity</a>
+                    <a href="blog4.html">> You Asked for Perfect and Unrealistic Expectations</a>
+                    <a href="blog6.html">> Aristotle and Dante Discover the Secrets of the Universe and Self-Acceptance</a>
+                    <a href="blog5.html">> Darius the Great Is Not Okay and Achieving Individuation</a>
+                </div>
+                <div class="button">
+                    <a href="blog.html">VIEW ALL</a>
+                </div>
+            </div>
+            <div class="profile">
+                <h1>Follow Me</h1>
+                <a href="https://www.facebook.com/dishika.mehta.5/" target="_blank" class="fa fa-facebook"></a>
+                <a href="https://twitter.com/Dishika94051228" target="_blank" class="fa fa-twitter"></a>
+                <a href="https://www.tumblr.com/blog/andriel-foxes" target="_blank" class="fa fa-tumblr"></a>
+                <a href="https://www.linkedin.com/in/dishika-mehta-a303281a6" target="_blank" class="fa fa-linkedin"></a>
+                <a href="https://www.instagram.com/dishika_mehta/" target="_blank" class="fa fa-instagram"></a>
+            </div>
+            <div class="links">
+                <a href="javascript:void(0)" style="float: right; padding:20px;" onclick="closeNav()">CLOSE</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="header"> 
+                <span style="font-size:30px;cursor:pointer; float: left;" onclick="openNav()">&#9776;</span>  
+                <h1>Auroras and Alluring Fiction</h1>
+                <p style="font-size: 20px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">A literary blog that takes you a journey through the books I've read and how they've left a lasting impact:
+                an exuberant amalgamation of the learning experiences that they bring and how living vicariously can 
+                teach you so much about life- the undeniably complex yet beautiful adventure.</p>
+            </div>
+            <div class="right" style="padding:20px; font-family: Poppins, sans-serif; margin-top:20px">
+                <div class="links">
+                    <a href="page2.html"><i class="fa fa-arrow-circle-left" style="font-size:36px;"></i></a>
+                </div>
+                <div class="blog" style="padding: 40px;">
+                    <div class="dropdown">
+                        <i class="fa fa-share-alt" style="font-size: 25px; cursor: pointer;"></i>
+                        <div class="dropdown-content">
+                        <a href="#">Copy Link</a>
+                        <a href="#">Facebook</a>
+                        <a href="#">E-Mail</a>
+                        </div>
+                      </div>
+                      <br>
+                    <h1>Darius the Great is Not Okay and Achieving Individuation</h1>
+                    <h2>The subtle art of dealing with the diversities of one's family and heritage and learning to identify and
+                     accept the uniqueness of one's mind, body and soul despite it all.</h2>
+                    <div class="center">
+                    <img alt="Darius the great is not okay book cover by Adib Khorram" src="blog5.jpg" title="Darius the great is 
+                    not okay by Adib Khorram" >
+                    </div>
+                    <h3>So who is <a href="https://www.amazon.in/Darius-Great-Okay-Adib-Khorram/dp/0525552960">Darius the Great</a> 
+                    and why is he not okay?&nbsp;</h3>
+                    <div>Darius is just an American-Persian boy living his life in the shadows, avoiding the attention of 'Soulless 
+                    Minions of Orthodoxy' who make fun of his name and heritage. Being meek and shy, he tries to let it go instead of 
+                    standing up to them, which makes his disapproving father, an 'Ubermensch'; dissatisfied and unhappy with him. 
+                    Clinically depressed and disoriented, Darius feels like a social outcast who doesn't belong anywhere and might 
+                    never be enough no matter what he does.</div>
+                    <blockquote><i>"It's okay to not be okay."</i>></blockquote>
+                    <h4>The Transitional Journey from Darius to Darioush -</h4>
+                    <p>When his grandfather is diagnosed with a terminal illness, Darius and his family get to visit his native 
+                    country and meet his maternal relatives for the first time in his life. Dealing with his grandfather's cutting 
+                    remarks, the gruesome comments of some local boys and taunts of his uncle based on his physical appearance, 
+                    Darius feels like he doesn't belong.</p>
+                    <h3>A Heart-Warming Companionship-</h3>
+                    <p>Through all of it, Darius has a companion- Sohrab: a local Iranian boy and an amicable neighbor who accepts 
+                    Darius for who he is, defends him from bullies and their hurtful judgments and makes him feel like he belongs 
+                    by urging people to speak in English around Darius as he is hardly versed in Farsi. The building of their new 
+                    found friendship is like sipping on a warm, welcoming cup of tea for the soul: refreshing, comforting and 
+                    inexplicably beautiful.</p>
+                    <blockquote><i>"Everyone wants you here. We have a saying in Farsi. It translates 'your place was empty'. We say 
+                    it when we miss somebody."</i></blockquote>
+                    <div style="text-align: center;">
+                        <img alt="Daruis the great is not okay indivuation biracial self acceptance" src="blog5.1.jpg" 
+                        title="Embracing Biracialism and Multi-Ethnicity"></div>
+                    <h4>The Fragile Familial Dynamic-</h4>
+                    <p>Darius is constantly riddled with the fear of being replaced by his younger sister, Laleh who he feels is 
+                    like a do-over for his parents; a perfect little girl fluent in Farsi, charming, popular and socially accepted 
+                    everywhere she goes: the polar opposite of him. He gets jealous at times but his insecurity never leads him to 
+                    be hateful and despise his loving sister. The only person who loves him for who he is other than Sohrab is his 
+                    Mamou, who never fails to show her affection for her beloved grandson even though she doesn't completely 
+                    understand him at all times. He always seeks the validation of his father and it is soul crushing to see how 
+                    much it affects him when he doesn't get it.&nbsp;</p>
+                    <h4>Dealing with Depression-&nbsp;</h4>
+                    <p>Darius always felt like people thought the worst about him. He was his own critic. He'd push people away and 
+                    feel like he was being selfish when he put himself before others. He had a seemingly good life but what people 
+                    failed to understand was that <b>depression doesn't necessarily need a reason</b>. It just is, an as Darius 
+                    states <i>'his brain simply doesn't produce the right chemicals'</i>. The pellets of harrowing memories go 
+                    unnoticed until they hail a devastating and adverse snowstorm of physical and emotional affliction.</p>
+                    <p>It's so heart rendering to watch everyone eventually trying to find a way to connect to that side of Darius 
+                    and his emotional 'Slingshot Maneuvers' (or as we call them- mood swings) if not make it better, in their own 
+                    adorable ways.</p>
+                    <blockquote><i>"Suicide isn't the only way you can lose someone to depression."</i></blockquote>
+                    <p>In the book, Darius' mother also acknowledges the <b>difficulties of moving away</b>. It requires abundant 
+                    sacrifice and the willingness to start over; no matter how challenging it gets. But at the same time, it is 
+                    important to bear a part of your inheritance with pride.&nbsp;</p>
+                    <p>The beautiful story of Darioush teaches us to treasure, love and <b>cherish your family</b>, value their
+                    sacrifices and be there for them unwaveringly, despite trivial complexities and differences. It never gets 
+                    easy to conquer the generation gap between you and your parents, sometimes even your siblings. But they are 
+                    always wishing the best for you, however difficult it may seem to believe. <b>Communicate, express and involve 
+                    them in your life</b>, trust me they love that. ;)</p>
+                    <p>What is your take on approaching and helping people with depression, as a therapist or a confidant? I would 
+                    love to hear from you in the comments!</p>
+                    <p>Thank you folks, the next post rolls out next week so stay tuned :-)</p>
+                    <div class="dropdown">
+                        <i class="fa fa-share-alt" style="font-size: 25px; cursor: pointer;"></i>
+                        <div class="dropdown-content">
+                        <a href="#">Copy Link</a>
+                        <a href="#">Facebook</a>
+                        <a href="#">E-Mail</a>
+                        </div>
+                      </div>
+                      <br>
+                </div>
+            </div> 
+            <div class="links" style="float: right; padding-right: 60px;">
+                <a href="#top"><i class="fa fa-arrow-circle-up" style="font-size:36px; float: right; padding:20px;"></i></a>
+            </div>
+        </div>
+        </div>
+        <script>
+            function openNav() {
+            document.getElementById("leftnav").style.width = "100%";
+            }
+            
+            function closeNav() {
+            document.getElementById("leftnav").style.width = "0";
+            }
+        </script>
+
+        <div class="footer">
+            <div class="footer footer-container">
+                <h3>Useful Links:</h3>
+                <div class="links">
+                    <p><a  href="home.html">> Home</a></p>
+                    <p><a href="blog.html">> Blogs</a></p>
+                    <p><a href="featured.html">> Featured</a></p>
+                    <p><a href="contact.html">> Contact</a></p>
+                </div>
+            </div>
+            <div class="footer footer-container">
+                <h3>Follow Me:</h3>
+                <a href="https://www.facebook.com/dishika.mehta.5/" target="_blank" class="fa fa-facebook"></a>
+                <a href="https://twitter.com/Dishika94051228" target="_blank" class="fa fa-twitter"></a>
+                <a href="https://www.tumblr.com/blog/andriel-foxes" target="_blank" class="fa fa-tumblr"></a>
+                <a href="https://www.linkedin.com/in/dishika-mehta-a303281a6" target="_blank" class="fa fa-linkedin"></a>
+                <a href="https://www.instagram.com/dishika_mehta/" target="_blank" class="fa fa-instagram"></a>
+                <h3>Connect via E-Mail:</h3>
+                <div class="links">
+                    <i style="font-size:24px" class="fa">&#xf0e0;</i><a style="display: inline;" href="mailto:dishikamehta@gmail.com"> dishikamehta@gmail.com</a>
+                </div>
+            </div>
+            <div class="footer footer-container">
+                <h3>Subscribe to Our Newsletter!</h3>
+                <p style="color: grey;">Thank you for visiting my blog-<i><span style="color: black;">'Auroras And Alluring Fiction'</span></i>. 
+                To stay updated on all blogs, subscribe to our weekly mails below:</p>
+                <p>E-Mail Address: <input type="email"><i style="font-size:20px" class="fa fa-paper-plane"></i></p>
+            </div>
+        </div>
+</body>
+</html>

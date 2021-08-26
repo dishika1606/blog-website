@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alex Brush">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|Poppins">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='styles.css' rel='stylesheet'>
+    <title>Auroras and Alluring Fiction</title>
+    <style>
+        .left{   
+            float: left;
+            position: absolute;
+            margin: 0;
+            top: 60px;
+            left: 0;
+            z-index: 1;
+            width: 0;
+            background-color: rosybrown;
+            color: snow;
+            text-align: center;
+            transition: 0.3s;
+            overflow-x: hidden;
+        }
+
+        .left .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            text-decoration: none;
+            color: #333;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .right {
+            width: 80%;
+            background-color: lavenderblush;
+            color: dimgrey;
+            opacity: 0.8;
+            margin:auto;
+        }
+
+        .blog {
+            padding: 10px;
+            margin:20px;
+            background-color:snow;
+            border-radius: 10px;
+            border: 5px solid wheat;
+            box-shadow: 5px 5px tan;
+        }
+
+        .blog a {
+            font-family: Poppins, sans-serif;
+            text-decoration: none;
+            color: rosybrown;
+        }
+
+        @media screen and (max-width: 800px) {
+        .right, .blog img {   
+            width: 100%;
+            padding: 0;
+            height:100%;
+        }
+  }
+
+    </style>
+</head>
+<body> 
+        <ul>
+            <li><a  href="home.html">HOME</a></li>
+            <li><a class="active" href="#">BLOGS</a></li>
+            <li><a href="featured.html">FEATURED</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li style="float:right"><button id="myBtn" style="background-color: #d9bfbf; font-weight: 900; padding:10px; font-family: Poppins, sans-serif; border: #333;">SUBSCRIBE</button></li>
+        </ul>
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Subscribe to Our Weekly Newsletter</h2>
+              </div>
+              <div class="modal-body">
+                <p>Thank you for visiting my blog-'Auroras And Alluring Fiction'.
+                    To stay updated on all blogs, subscribe to our weekly mails below:</p>
+                    <p>E-Mail Address: <input type="email"><i style="font-size:20px" class="fa fa-paper-plane"></i></p>
+              </div>
+            </div>
+          
+        </div>
+
+        <script>
+            // Get the modal
+            var modal = document.getElementById("myModal");
+            
+            // Get the button that opens the modal
+            var btn = document.getElementById("myBtn");
+            
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+            
+            // When the user clicks the button, open the modal 
+            btn.onclick = function() {
+              modal.style.display = "block";
+            }
+            
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+              modal.style.display = "none";
+            }
+            
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
+            </script>
+        <div id="leftnav" class="left">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="profile">
+                <h1>About Me</h1>
+                <img src="me.jpeg" alt="Me">
+                <p>Hii, I'm Dishika Mehta, a college student with dark academia aesthetic and a serious problem of escapism!</p>
+                <div class="button">
+                    <a href="contact.html">VIEW PROFILE</a>
+                </div>
+            </div>
+            <div class="profile">
+                <div class="archive">
+                    <h1>Popular Blogs</h1>
+                    <a href="blog1.html">> Pipe Dreams and Maneuvering through Life</a>
+                    <a href="blog7.html">> One of Us is Lying and the Unspoken Social Media Ambiguity</a>
+                    <a href="blog4.html">> You Asked for Perfect and Unrealistic Expectations</a>
+                    <a href="blog6.html">> Aristotle and Dante Discover the Secrets of the Universe and Self-Acceptance</a>
+                    <a href="blog5.html">> Darius the Great Is Not Okay and Achieving Individuation</a>
+                </div>
+                <div class="button">
+                    <a href="blog.html">VIEW ALL</a>
+                </div>
+            </div>
+            <div class="profile">
+                <h1>Follow Me</h1>
+                <a href="https://www.facebook.com/dishika.mehta.5/" target="_blank" class="fa fa-facebook"></a>
+                <a href="https://twitter.com/Dishika94051228" target="_blank" class="fa fa-twitter"></a>
+                <a href="https://www.tumblr.com/blog/andriel-foxes" target="_blank" class="fa fa-tumblr"></a>
+                <a href="https://www.linkedin.com/in/dishika-mehta-a303281a6" target="_blank" class="fa fa-linkedin"></a>
+                <a href="https://www.instagram.com/dishika_mehta/" target="_blank" class="fa fa-instagram"></a>
+            </div>
+            <div class="links">
+                <a href="javascript:void(0)" style="float: right; padding:20px;" onclick="closeNav()">CLOSE</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="header"> 
+                <span style="font-size:30px;cursor:pointer; float: left;" onclick="openNav()">&#9776;</span>  
+                <h1>Auroras and Alluring Fiction</h1>
+                <p style="font-size: 20px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">A literary blog that takes you a journey through the books I've read and how they've left a lasting impact:
+                an exuberant amalgamation of the learning experiences that they bring and how living vicariously can 
+                teach you so much about life- the undeniably complex yet beautiful adventure.</p>
+            </div>
+            <div class="right" style="padding:20px;">
+                <div class="links">
+                    <a href="blog.html"><i class="fa fa-arrow-circle-left" style="font-size:36px;"></i></a>
+                </div>
+                <div class="blog" style="padding: 40px; font-family: Poppins, sans-serif;">
+                    <div class="dropdown">
+                        <i class="fa fa-share-alt" style="font-size: 25px; cursor: pointer;"></i>
+                        <div class="dropdown-content">
+                        <a href="#">Copy Link</a>
+                        <a href="#">Facebook</a>
+                        <a href="#">E-Mail</a>
+                        </div>
+                      </div>
+                      <br>
+                    <h1>All For The Game and Embracing Imperfections</h1>
+                    <h2>Underrated much? I think YES!</h2>
+                    <blockquote>
+                        <p>It’s about second chances, Neil. Second, third, fourth, whatever, as long as you get at least one more than what anyone 
+                        else wanted to give you.” </p>
+                    </blockquote>
+                    <div class="center">
+                        <img alt="All for the Game trilogy book covers" src="blog2.jpg" title="All for the Game Trilogy book cover" >
+                    </div>
+                    <h3 style="text-align: left;"><b>CAUTION!</b> Proceed only if you're ready to get your heart broken into a million 
+                    little pieces and get them nursed back together with the utmost care, leaving you with insurmountable pain and 
+                    ultimately the ethereal feeling of comfort in it all. (I'm fine.*sigh*)</h3>
+                    <p><a style="font-weight: bold;" href="https://www.amazon.in/Foxhole-Court-All-Game-Book-ebook/dp/B00E9BLRUI" 
+                    target="_blank">The Foxhole Court</a>, <a style="font-weight: bold;" href="https://www.amazon.in/Raven-King-All-Game-Book-ebook/dp/B00E9YKGAC" 
+                    target="_blank">The Raven King</a> and <a href="https://www.amazon.in/Kings-Men-All-Game-Book-ebook/dp/B00QHMU0PU
+                    " style="font-weight: bold;" target="_blank">The King's Men</a><a style="font-weight: bold;" href="https://www.a
+                    azon.in/Kings-Men-All-Game-Book-ebook/dp/B00QHMU0PU" target="_blank">:</a> the most heart rendering trilogy series I've 
+                    ever read, these books are all about misfits of the Foxhole Court trying to get pieced together as a Palmetto State 
+                    University Team&nbsp;in the jigsaw of<a href="https://foxhole-court.fandom.com/wiki/Exy" target="_blank"> Exy</a>- 
+                    the 'bastard' sport of speed, aggression and ferocity.</p>
+                    <p>The character development portrayed through these novels, 
+                    the diverse problems that every Fox in <a href="https://foxhole-court.fandom.com/wiki/David_Wymack">Coach Wymack</a>
+                    's team faced, the dilemmas that each of these broken souls have braved through and how they found a way to mend 
+                    each other despite the constant hate, rejections, threats and trauma they faced: it took so much from me and gave 
+                    me back so much more than I could've imagined.</p>
+                    <p style="text-align: center;"><img alt="All for the Game Exy 
+                    team" src="blog2.2.jpg" /></p>
+                    <h3 style="text-align: left;">Let me take you through each character and how they've taught me to embrace who I am
+                     whilst work on becoming the best possible version of myself.</h3>
+                    <p>The jovial, endearing and supremely tolerant <b><a href="https://foxhole-court.f
+                    andom.com/wiki/Nicky_Hemmick" target="_blank">Nicky</a></b> learnt to let go of the need for his par
+                    ents' validation and embrace his identity and gender with pride. (Happy Pride Month yay!)&nbsp;</p>
+                    <p><b><a href="https://foxhole-court.fandom.com/wiki/Neil_Josten" target="_blank">Neil</a></b>, the quiet yet fierce boy 
+                    on the run from his mafia lord, abusive father learnt to accept the fact that that he needed to let people in and that 
+                    it's okay to not be okay. He learnt to stand up and fight back, but most importantly, to trust people and heal from his 
+                    past by overcoming his angst and believing in himself.&nbsp;</p>
+                    <p></p>
+                    <blockquote><i>"Don't make this about him, make this about you. You can fix this, right here, right now. Stop being 
+                    collateral damage and make him fight for you."&nbsp;</i></blockquote>
+                    <p></p>
+                    <p><b><a href="https://foxhole-court.fandom.com/wiki/Matt_Boyd" target="_blank">Matt</a> and <a href="https://foxhole-
+                    court.fandom.com/wiki/Dan_Wilds" target="_blank">Dan</a></b>, the power couple of the team were the perfect portrayal of 
+                    patience, compassion and resilience. They never pushed Neil to open up to them and gave him so much time and patience: 
+                    like he was made of fragile glass. They show us how important it is to keep your calm even in the most adverse situations
+                    : by being strategic in a room full of impulsive people.&nbsp;</p>
+                    <p>I loved the unreadable and manipulative <b><a href="https://foxhole-court.fandom.com/wiki/Allison_Reynolds" target="
+                        _blank">Allison</a></b> who left all the luxuries of her youth just to pursue her passion for Exy despite 
+                        repercussions. She welcomed a life full of challenges and hardships, letting the world know that there's no 
+                        stopping her when it comes to something she loved.&nbsp;</p>
+                        <p>The sweet tempered <b><a href="https://foxhole-court.fandom.com/wiki/Renee_Walker" target="_blank">Renee</a>
+                        </b>&nbsp;fought back after being physically assaulted and eventually learnt to embraced religion and Exy as an 
+                        outlet and redemption for her other wrong-doings.</p>
+                        <p>The distant <b><a href="https://foxhole-court.fandom.com/wiki/Aaron_Minyard" target="_blank">Aaron</a></b> 
+                        went from never truly understanding his troubled brother Andrew to protecting him when he needed it the most. 
+                        He put his family before his personal hatred.</p><p><b><a href="https://foxhole-court.fandom.com/wiki/Andrew_Minyard"
+                         target="_blank">Andrew</a></b> the mentally unstable guy who'd go to any lengths to protect his own and his ability 
+                        to love despite what the medication had turned him into. He let his pretence of not caring about Exy come 
+                        apart just because it mattered a lot to everyone he cared about.&nbsp;</p><p>And <b><a href="https://foxho
+                        le-court.fandom.com/wiki/Kevin_Day" target="_blank">Kevin Day</a></b>, the outcast star player who kept up his
+                         endurance and rebellious spirit, his unquenchable thirst to be the best despite the unimaginable anguish 
+                         and torment he'd survived in his past.</p>
+                         <blockquote>
+                             <p><i>"Fight because you don't know how to die quietly. Win because you don't know how to lose. 
+                            The king's ruled long enough- it's time to tear his castle down."</i>&nbsp;</p>
+                        </blockquote>
+                        <p>They showed immense professionalism: they were divided into two social groups but never failed to play as
+                        one on court. There were moments in the books where I was fueled by their tournament matches: the fiery 
+                        passion, dedication and mesmerizing coordination they shared on court. The conflicting emotions and 
+                        choices, the bitter-sweet feeling and the wholesomeness that these books leave you with is incomparable.
+                        &nbsp;</p>
+                        <h4 style="text-align: left;">Nothing about them speaks perfection and yet it is the most perfect trilogy I 
+                        could've asked for.</h4>
+                        <p></p>
+                        <div class="center">
+                            <img alt="All for the Game quotes" src="blog2.1.jpg">
+                        </div>
+                        <p></p>
+                        <h3 style="text-align: left;">Embrace being a misfit because it gives you an opportunity to stand out.</h3>
+                        <p style="text-align: left;">Self love is not just a millennial hashtag, it's something that a lot of us 
+                        overlook when hypnotized by the superficial and seemingly flawless digitally ruled world.&nbsp;</p>
+                        <blockquote>
+                        <div><i>"If you ask for half the truth, you'll only get half the truth."</i></div>
+                        </blockquote>
+                        <p style="text-align: left;">I know it's challenging but stop being so critical and judgmental 
+                        and start believing in yourself. Smile at yourself every once in a while and hustle for what drives and 
+                        fuels you.&nbsp;</p>
+                        <h4 style="text-align: left;">YOU'RE STRIVING TO BE THE BEST VERSION OF YOURSELF. YOU'RE BOLD, BRAVE AND 
+                        BEAUTIFUL. Don't let anyone make you think otherwise.</h4>
+                        <p>Do you have any trilogies that have left you in a state of euphoria or epiphany? Do let me know in the 
+                        comments!</p>
+                        <p>Thank you for reading and I'll be back with more soon!</p>
+                        <div class="dropdown">
+                            <i class="fa fa-share-alt" style="font-size: 25px; cursor: pointer;"></i>
+                            <div class="dropdown-content">
+                            <a href="#">Copy Link</a>
+                            <a href="#">Facebook</a>
+                            <a href="#">E-Mail</a>
+                            </div>
+                          </div>
+                          <br>
+                    </div>
+            </div> 
+            <div class="links" style="float: right; padding-right: 60px;">
+                <a href="#top"><i class="fa fa-arrow-circle-up" style="font-size:36px; float: right; padding:20px;"></i></a>
+            </div>
+        </div>
+        <script>
+            function openNav() {
+            document.getElementById("leftnav").style.width = "100%";
+            }
+            
+            function closeNav() {
+            document.getElementById("leftnav").style.width = "0";
+            }
+        </script>
+
+        <div class="footer">
+            <div class="footer footer-container">
+                <h3>Useful Links:</h3>
+                <div class="links">
+                    <p><a  href="home.html">> Home</a></p>
+                    <p><a href="blog.html">> Blogs</a></p>
+                    <p><a href="featured.html">> Featured</a></p>
+                    <p><a href="contact.html">> Contact</a></p>
+                </div>
+            </div>
+            <div class="footer footer-container">
+                <h3>Follow Me:</h3>
+                <a href="https://www.facebook.com/dishika.mehta.5/" target="_blank" class="fa fa-facebook"></a>
+                <a href="https://twitter.com/Dishika94051228" target="_blank" class="fa fa-twitter"></a>
+                <a href="https://www.tumblr.com/blog/andriel-foxes" target="_blank" class="fa fa-tumblr"></a>
+                <a href="https://www.linkedin.com/in/dishika-mehta-a303281a6" target="_blank" class="fa fa-linkedin"></a>
+                <a href="https://www.instagram.com/dishika_mehta/" target="_blank" class="fa fa-instagram"></a>
+                <h3>Connect via E-Mail:</h3>
+                <div class="links">
+                    <i style="font-size:24px" class="fa">&#xf0e0;</i><a style="display: inline;" href="mailto:dishikamehta@gmail.com"> dishikamehta@gmail.com</a>
+                </div>
+            </div>
+            <div class="footer footer-container">
+                <h3>Subscribe to Our Newsletter!</h3>
+                <p style="color: grey;">Thank you for visiting my blog-<i><span style="color: black;">'Auroras And Alluring Fiction'</span></i>. 
+                To stay updated on all blogs, subscribe to our weekly mails below:</p>
+                <p>E-Mail Address: <input type="email"><i style="font-size:20px" class="fa fa-paper-plane"></i></p>
+            </div>
+        </div>
+</body>
+</html>

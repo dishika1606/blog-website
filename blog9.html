@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alex Brush">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|Poppins">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='styles.css' rel='stylesheet'>
+    <title>Auroras and Alluring Fiction</title>
+    <style>
+        .left{   
+            float: left;
+            position: absolute;
+            margin: 0;
+            top: 60px;
+            left: 0;
+            z-index: 1;
+            width: 0;
+            background-color: rosybrown;
+            color: snow;
+            text-align: center;
+            transition: 0.3s;
+            overflow-x: hidden;
+        }
+
+        .left .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            text-decoration: none;
+            color: #333;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .right {
+            width: 80%;
+            background-color: lavenderblush;
+            color: dimgrey;
+            opacity: 0.8;
+            margin:auto;
+        }
+
+        .blog {
+            padding: 10px;
+            margin:20px;
+            background-color:snow;
+            border-radius: 10px;
+            border: 5px solid wheat;
+            box-shadow: 5px 5px tan;
+        }
+
+        .blog a {
+            font-family: Poppins, sans-serif;
+            text-decoration: none;
+            color: rosybrown;
+        }
+
+        @media screen and (max-width: 800px) {
+        .right, .blog img {   
+            width: 100%;
+            padding: 0;
+            height:100%;
+        }
+  }
+
+    </style>
+</head>
+<body> 
+        <ul>
+            <li><a  href="home.html">HOME</a></li>
+            <li><a class="active" href="blog.html">BLOGS</a></li>
+            <li><a href="merch.html">MERCH</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li style="float:right"><button id="myBtn" style="background-color: #d9bfbf; font-weight: 900; padding:10px; font-family: Poppins, sans-serif; border: #333;">SUBSCRIBE</button></li>
+        </ul>
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Subscribe to Our Weekly Newsletter</h2>
+              </div>
+              <div class="modal-body">
+                <p>Thank you for visiting my blog-'Auroras And Alluring Fiction'.
+                    To stay updated on all blogs, subscribe to our weekly mails below:</p>
+                    <p>E-Mail Address: <input type="email"><i style="font-size:20px" class="fa fa-paper-plane"></i></p>
+              </div>
+            </div>
+          
+        </div>
+
+        <script>
+            // Get the modal
+            var modal = document.getElementById("myModal");
+            
+            // Get the button that opens the modal
+            var btn = document.getElementById("myBtn");
+            
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+            
+            // When the user clicks the button, open the modal 
+            btn.onclick = function() {
+              modal.style.display = "block";
+            }
+            
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+              modal.style.display = "none";
+            }
+            
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
+            </script>
+        <div id="leftnav" class="left">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="profile">
+                <h1>About Me</h1>
+                <img src="me.jpeg" alt="Me">
+                <p>Hii, I'm Dishika Mehta, a college student with dark academia aesthetic and a serious problem of escapism!</p>
+                <div class="button">
+                    <a href="contact.html">VIEW PROFILE</a>
+                </div>
+            </div>
+            <div class="profile">
+                <div class="archive">
+                    <h1>Popular Blogs</h1>
+                    <a href="blog1.html">> Pipe Dreams and Maneuvering through Life</a>
+                    <a href="blog7.html">> One of Us is Lying and the Unspoken Social Media Ambiguity</a>
+                    <a href="blog4.html">> You Asked for Perfect and Unrealistic Expectations</a>
+                    <a href="blog6.html">> Aristotle and Dante Discover the Secrets of the Universe and Self-Acceptance</a>
+                    <a href="blog5.html">> Darius the Great Is Not Okay and Achieving Individuation</a>
+                </div>
+                <div class="button">
+                    <a href="blog.html">VIEW ALL</a>
+                </div>
+            </div>
+            <div class="profile">
+                <h1>Follow Me</h1>
+                <a href="https://www.facebook.com/dishika.mehta.5/" target="_blank" class="fa fa-facebook"></a>
+                <a href="https://twitter.com/Dishika94051228" target="_blank" class="fa fa-twitter"></a>
+                <a href="https://www.tumblr.com/blog/andriel-foxes" target="_blank" class="fa fa-tumblr"></a>
+                <a href="https://www.linkedin.com/in/dishika-mehta-a303281a6" target="_blank" class="fa fa-linkedin"></a>
+                <a href="https://www.instagram.com/dishika_mehta/" target="_blank" class="fa fa-instagram"></a>
+            </div>
+            <div class="links">
+                <a href="javascript:void(0)" style="float: right; padding:20px;" onclick="closeNav()">CLOSE</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="header"> 
+                <span style="font-size:30px;cursor:pointer; float: left;" onclick="openNav()">&#9776;</span>  
+                <h1>Auroras and Alluring Fiction</h1>
+                <p style="font-size: 20px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">A literary blog that takes you a journey through the books I've read and how they've left a lasting impact:
+                an exuberant amalgamation of the learning experiences that they bring and how living vicariously can 
+                teach you so much about life- the undeniably complex yet beautiful adventure.</p>
+            </div>
+            <div class="right" style="padding:20px; font-family: Poppins, sans-serif; margin-top:20px">
+                <div class="links">
+                    <a href="blog.html"><i class="fa fa-arrow-circle-left" style="font-size:36px;"></i></a>
+                </div>
+                <div class="blog" style="padding: 40px;">
+                    <div class="dropdown">
+                        <i class="fa fa-share-alt" style="font-size: 25px; cursor: pointer;"></i>
+                        <div class="dropdown-content">
+                        <a href="#">Copy Link</a>
+                        <a href="#">Facebook</a>
+                        <a href="#">E-Mail</a>
+                        </div>
+                      </div>
+                      <br>
+                    <h1>All the Bright Places and Art of Redemption</h1>
+                    <blockquote><p>&nbsp;"The thing I realize is that it's not what you take, it's what you leave."</p></blockquote>
+                    <div class="center"><img data-original-height="1656" data-original-width="1920" src="blog9.jpg" 
+                    width="320" /></div>
+                    <p>&nbsp;<a href="https://www.amazon.in/All-Bright-Places-Jennifer-Niven/dp/0385755910" target="_blank">
+                    All the Bright Places</a> is hands down one of the most perplexing yet hard-hitting novels I've ever read. 
+                    The book takes us through the lives of <a href="https://all-the-bright-places.fandom.com/wiki/Theodore_Finch" 
+                    target="_blank">Theodore Finch</a>, a young boy who struggles with multiple mental health disorders and 
+                    <a href="https://all-the-bright-places.fandom.com/wiki/Violet_Markey" target="_blank">Violet Markey</a>, a 
+                    formerly popular girl who put herself through social exile after her sister, Eleanor's death. After a fateful 
+                    encounter at the school bell tower where Finch saves Violet from jumping off, their lives entangle in a dance 
+                    of keeping each other afloat and saving each other from getting sucked into the vortex of trauma, loss, guilt 
+                    and depression.</p>
+                    <h2>Denial and Acceptance</h2>
+                    <div>As the story takes course, the two characters: Violet and Finch get paired up for a Geography project on 
+                    exploring Indiana. The project reforms into something more for both of them. Violet deals with the troubles of 
+                    accepting the fact that her sister's death was not her fault and that she has the right to move on with her life 
+                    despite the inexplicable amount of grief she's going through, by finally opening up and talking about it to Finch. 
+                    Similarly, Finch unclamps about his physical abuse at the hands of his father and his mother's state of denial 
+                    about his steeply deteriorating mental heath due to depression and undiagnosed bipolar disorder.&nbsp;</div>
+                    <blockquote><div>"Sometimes, Ultraviolet, things feel true to us even if they're not."</div></blockquote>
+                    <h2>Holding on and Letting Go</h2>
+                    <p>Finch doesn't prefer labels and likes to dwell in smaller spaces as they bring him a sense of security and 
+                    familiarity. And isn't that what we all crave in a way? It made me ponder about the purpose of associating 
+                    ourselves in smaller groups, making ourselves vulnerable only to selective people. Even the idea of letting 
+                    ourselves be expressive of our intimate thoughts knowingly or unknowingly, puts us in a state of intermittent 
+                    panic, but that's not the case with 'our' people. And Violet answers to the definition of 'our' people to 
+                    perfection:</p>
+                    <blockquote><p>"I guess you can be yourself, whatever that means- the best and the worst of you. And they love 
+                    you anyway. You can fight, but even when you're mad at them, you know they're not going to stop being your 
+                    friend."</p></blockquote>
+                    <div>Violet is that person to Finch. She pulls him our of the twisted, gloomy ideas of dying that his mind 
+                    compels him to think and helps him 'Stay Awake' and not 'Sleep'. Violet is like his life support and he holds 
+                    onto her tightly.&nbsp;</div>
+                    <div>For Violet, being with Finch guides her through the path of self- absolution and recovery. 
+                    She learns that:</div>
+                    <blockquote><div>"Growth itself contains the germ of happiness. Maybe a germ is enough. Maybe it's all you 
+                    need."</div></blockquote>
+                    <h2>Life and Death</h2><div>The book revolves around the these two conflicting yet complementary phenomenal 
+                    happenings. Finch is a controversy in himself, an oxymoron personified: a complex character obsessed with the 
+                    idea of dying while desiring to visually experience a map of beautiful and undiscovered places in life. When 
+                    Violet asks him why ambushed her into doing the Indiana project with him he simply replied:</div>
+                    <blockquote><p>"<b>Because our mountain is waiting.</b>...I think I've got a map in my car that wants to be used, 
+                    and I think there are places we can go that need to be seen. Maybe no one will ever visit them and appreciate 
+                    them or take time to think they're important, but maybe even the smallest place can mean something to us. At 
+                    least by the time we leave, we know we've seen it, this great state of ours. So come on. Let's go. Let's count 
+                    for something. <b>Let's get off that ledge.</b>"&nbsp;</p>
+                    </blockquote><p>&nbsp;Finch and Violet are very conflicting in a way, the former romanticizes death whereas the 
+                    latter is terrified at the idea of oblivion, dearth and paucity it brings with it. But by the end of the book, 
+                    it all culminates to just one thought:</p>
+                    <blockquote><p>"We do not remember days, we remember moments."</p></blockquote>
+                    <div class="center"><img data-original-height="1799" data-original-width="1171" height="320" src="blog9.1.jpg">
+                    </div><br>
+                    <p>&nbsp;What are some small things/ moments that make life worth living? Let me know in the comments and let's 
+                    make this small space a reminiscence of all things radiant and blissful. Thanks you for reading and see you back 
+                    next week!&nbsp;</p>
+                    <div class="dropdown">
+                        <i class="fa fa-share-alt" style="font-size: 25px; cursor: pointer;"></i>
+                        <div class="dropdown-content">
+                        <a href="#">Copy Link</a>
+                        <a href="#">Facebook</a>
+                        <a href="#">E-Mail</a>
+                        </div>
+                      </div>
+                      <br>
+                </div>
+            </div> 
+            <div class="links" style="float: right; padding-right: 60px;">
+                <a href="#top"><i class="fa fa-arrow-circle-up" style="font-size:36px; float: right; padding:20px;"></i></a>
+            </div>
+        </div>
+        </div>
+        <script>
+            function openNav() {
+            document.getElementById("leftnav").style.width = "100%";
+            }
+            
+            function closeNav() {
+            document.getElementById("leftnav").style.width = "0";
+            }
+        </script>
+
+        <div class="footer">
+            <div class="footer footer-container">
+                <h3>Useful Links:</h3>
+                <div class="links">
+                    <p><a  href="home.html">> Home</a></p>
+                    <p><a href="blog.html">> Blogs</a></p>
+                    <p><a href="featured.html">> Featured</a></p>
+                    <p><a href="contact.html">> Contact</a></p>
+                </div>
+            </div>
+            <div class="footer footer-container">
+                <h3>Follow Me:</h3>
+                <a href="https://www.facebook.com/dishika.mehta.5/" target="_blank" class="fa fa-facebook"></a>
+                <a href="https://twitter.com/Dishika94051228" target="_blank" class="fa fa-twitter"></a>
+                <a href="https://www.tumblr.com/blog/andriel-foxes" target="_blank" class="fa fa-tumblr"></a>
+                <a href="https://www.linkedin.com/in/dishika-mehta-a303281a6" target="_blank" class="fa fa-linkedin"></a>
+                <a href="https://www.instagram.com/dishika_mehta/" target="_blank" class="fa fa-instagram"></a>
+                <h3>Connect via E-Mail:</h3>
+                <div class="links">
+                    <i style="font-size:24px" class="fa">&#xf0e0;</i><a style="display: inline;" href="mailto:dishikamehta@gmail.com"> dishikamehta@gmail.com</a>
+                </div>
+            </div>
+            <div class="footer footer-container">
+                <h3>Subscribe to Our Newsletter!</h3>
+                <p style="color: grey;">Thank you for visiting my blog-<i><span style="color: black;">'Auroras And Alluring Fiction'</span></i>. 
+                To stay updated on all blogs, subscribe to our weekly mails below:</p>
+                <p>E-Mail Address: <input type="email"><i style="font-size:20px" class="fa fa-paper-plane"></i></p>
+            </div>
+        </div>
+</body>
+</html>

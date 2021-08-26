@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alex Brush">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|Poppins">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='styles.css' rel='stylesheet'>
+    <title>Auroras and Alluring Fiction</title>
+    <style>
+        .left{   
+            float: left;
+            position: absolute;
+            margin: 0;
+            top: 60px;
+            left: 0;
+            z-index: 1;
+            width: 0;
+            background-color: rosybrown;
+            color: snow;
+            text-align: center;
+            transition: 0.3s;
+            overflow-x: hidden;
+        }
+
+        .left .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            text-decoration: none;
+            color: #333;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .right {
+            width: 80%;
+            background-color: lavenderblush;
+            color: dimgrey;
+            opacity: 0.8;
+            margin:auto;
+        }
+
+        .blog {
+            padding: 10px;
+            margin:20px;
+            background-color:snow;
+            border-radius: 10px;
+            border: 5px solid wheat;
+            box-shadow: 5px 5px tan;
+        }
+        
+        .blog a {
+            font-family: Poppins, sans-serif;
+            text-decoration: none;
+            color: rosybrown;
+        }
+
+        @media screen and (max-width: 800px) {
+        .right, .blog img {   
+            width: 100%;
+            padding: 0;
+            height:100%;
+        }
+  }
+
+    </style>
+</head>
+<body> 
+        <ul>
+            <li><a  href="home.html">HOME</a></li>
+            <li><a class="active" href="blog.html">BLOGS</a></li>
+            <li><a href="merch.html">MERCH</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li style="float:right"><button id="myBtn" style="background-color: #d9bfbf; font-weight: 900; padding:10px; font-family: Poppins, sans-serif; border: #333;">SUBSCRIBE</button></li>
+        </ul>
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Subscribe to Our Weekly Newsletter</h2>
+              </div>
+              <div class="modal-body">
+                <p>Thank you for visiting my blog-'Auroras And Alluring Fiction'.
+                    To stay updated on all blogs, subscribe to our weekly mails below:</p>
+                    <p>E-Mail Address: <input type="email"><i style="font-size:20px" class="fa fa-paper-plane"></i></p>
+              </div>
+            </div>
+          
+        </div>
+
+        <script>
+            // Get the modal
+            var modal = document.getElementById("myModal");
+            
+            // Get the button that opens the modal
+            var btn = document.getElementById("myBtn");
+            
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+            
+            // When the user clicks the button, open the modal 
+            btn.onclick = function() {
+              modal.style.display = "block";
+            }
+            
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+              modal.style.display = "none";
+            }
+            
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
+            </script>
+        <div id="leftnav" class="left">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="profile">
+                <h1>About Me</h1>
+                <img src="me.jpeg" alt="Me">
+                <p>Hii, I'm Dishika Mehta, a college student with dark academia aesthetic and a serious problem of escapism!</p>
+                <div class="button">
+                    <a href="contact.html">VIEW PROFILE</a>
+                </div>
+            </div>
+            <div class="profile">
+                <div class="archive">
+                    <h1>Popular Blogs</h1>
+                    <a href="blog1.html">> Pipe Dreams and Maneuvering through Life</a>
+                    <a href="blog7.html">> One of Us is Lying and the Unspoken Social Media Ambiguity</a>
+                    <a href="blog4.html">> You Asked for Perfect and Unrealistic Expectations</a>
+                    <a href="blog6.html">> Aristotle and Dante Discover the Secrets of the Universe and Self-Acceptance</a>
+                    <a href="blog5.html">> Darius the Great Is Not Okay and Achieving Individuation</a>
+                </div>
+                <div class="button">
+                    <a href="blog.html">VIEW ALL</a>
+                </div>
+            </div>
+            <div class="profile">
+                <h1>Follow Me</h1>
+                <a href="https://www.facebook.com/dishika.mehta.5/" target="_blank" class="fa fa-facebook"></a>
+                <a href="https://twitter.com/Dishika94051228" target="_blank" class="fa fa-twitter"></a>
+                <a href="https://www.tumblr.com/blog/andriel-foxes" target="_blank" class="fa fa-tumblr"></a>
+                <a href="https://www.linkedin.com/in/dishika-mehta-a303281a6" target="_blank" class="fa fa-linkedin"></a>
+                <a href="https://www.instagram.com/dishika_mehta/" target="_blank" class="fa fa-instagram"></a>
+            </div>
+            <div class="links">
+                <a href="javascript:void(0)" style="float: right; padding:20px;" onclick="closeNav()">CLOSE</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="header"> 
+                <span style="font-size:30px;cursor:pointer; float: left;" onclick="openNav()">&#9776;</span>  
+                <h1>Auroras and Alluring Fiction</h1>
+                <p style="font-size: 20px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">A literary blog that takes you a journey through the books I've read and how they've left a lasting impact:
+                an exuberant amalgamation of the learning experiences that they bring and how living vicariously can 
+                teach you so much about life- the undeniably complex yet beautiful adventure.</p>
+            </div>
+            <div class="right" style="padding:20px; font-family: Poppins, sans-serif; margin-top:20px">
+                <div class="links">
+                    <a href="page2.html"><i class="fa fa-arrow-circle-left" style="font-size:36px;"></i></a>
+                </div>
+                <div class="blog" style="padding: 40px;">
+                    <div class="dropdown">
+                        <i class="fa fa-share-alt" style="font-size: 25px; cursor: pointer;"></i>
+                        <div class="dropdown-content">
+                        <a href="#">Copy Link</a>
+                        <a href="#">Facebook</a>
+                        <a href="#">E-Mail</a>
+                        </div>
+                      </div>
+                      <br>
+                    <h1>You Asked For Prefect and Unrealistic Expectations</h1>
+                    <h2 style="clear: both; text-align: left;">"If I don't have perfect grades, then who am I?"</h2>
+                    <h3 style="text-align: left;">You're human? Geez.</h3>
+                    <h2 style="text-align: left;">Dealing with academic pressure and stress and how to remind yourself about 
+                    what actually matters in life amidst it all.</h2>
+                    <blockquote>
+                        <div><i>"No one told me I'd have to know every answer to every test and also be a 'unique individual' 
+                        following my life's calling at seventeen."</i></div>
+                    </blockquote>
+                    <div class="center">
+                        <img alt="You asked for perfect themes"  src="blog4.png" >
+                    </div>
+                    <p><a href="https://www.amazon.in/You-Asked-Perfect-Laura-Silverman/dp/1492658278" target="_blank">
+                    You Asked For Perfect</a> is a story is about a young high school boy, Ariel Stone who's been a 
+                    disciplined perfectionist his whole life; with straight A's, extraordinarily gifted violist and a 
+                    consistent volunteer at the Animal Shelter. He's the golden child that any parent would be proud to show
+                     off and any college would be&nbsp;privileged to have.</p>
+                    <p>But his sudden Calculus grades decline put him a state of panic and anxiety where he tries to spend every 
+                    possible minute of his wakeful hours pushing himself to be better; so much that he ends up getting less than 
+                    five hours of sleep per day.&nbsp;</p>
+                    <p>When the very perturbed Ariel fails to see fruitful results despite all his efforts, he resorts to relying 
+                    on a 'friend', Amir, who's apparently brilliant at this subject. (A topper being tutored by another of his 
+                    kind, imagine that.)&nbsp;</p>
+                    <p>As they start to spend more time together, Ariel develops feeling for Amir. But for Ariel, their
+                    relation turns out to be another thing in his already over-filled plate with the impending college admission 
+                    prep looming over him. He thinks he can burden himself to juggle all of it at once until his watches his 10-year 
+                    old sister end up in the ICU due to stress. Until he misses Amir's art gallery opening. Until he realizes a littl
+                    e too late that he's too worn out and injured to come through for his best friend. Until every piece of the care
+                    fully assembled yet fragile Lego of his life falls apart.</p>
+                    <p><b>And that's where Ariel, subject to all the pressure he can possibly take, emerges as an appraised and 
+                    refined diamond; getting his priorities straight and paying heed to what actually matters in life- the unending 
+                    support of family and friends, cherished moments, unforgettable memories, internal bliss and self- satisfaction.
+                    </b></p>
+                    <blockquote><p><i>"They make us think that grade is more important than learning, and that's messed up. We're 
+                    all overwhelmed. You're not alone."</i></p></blockquote>
+                    <p>This book is about those of us who've been made to feel special their entire childhood and had their hopes 
+                    from themselves go so high that they struggle to catch up with the front they've been made to put on. When 
+                    perfection doesn't just come naturally and pulling one grade up leads to another one tumbling and everything 
+                    in life resonates with unordered chaos, you know you need to take a step back and introspect so that you can 
+                    'come back stronger than the 90's trend' when you're ready. (TS supremacy.)</p>
+                    <h4>Pulling all-nighters is not a badge of honor. Skipping out on social gathering, isolating and toiling 
+                    oneself till exhaustion for the sole purpose of academic excellence is not 'hard work'. And not being there 
+                    for your loved ones or <u>yourself</u> during emotional distress because 'you have other priorities or future 
+                    commitments' does not ameliorate the situation.</h4>
+                    <blockquote><p><i>"I know it's hard but keep perspective. None of this will matter in a year. It's just 
+                    life."</i></p></blockquote>
+                    <h3>So what can you do to curb unworkable expectations?</h3>
+                    <p><ol>
+                        <li><b>Take it all one day at a time</b>. Focus on the task at hand and instead of planning out for a week,
+                         try pacing and planning out for the day or merely the next couple of hours. Tell yourself that you've 
+                         got this and stop the minute you realize that you've clearly not.</li><br>
+                        <li>Don't try to stay awake at 
+                        ungodly hours to meet impractical deadlines. Just <b>embrace sleep</b> after a long day.</li><br>
+                        <li><b>Talk</b>. I cannot stress this point enough. See a professional or seek your friends to be the 
+                        listener and just rant about every single thing that's troubling you. If you think one friend doesn't 
+                        do it, sit your siblings down and bore them out of their minds because well, they've got to serve some 
+                        purpose in this world.(*snickers*)</li><br>
+                        <li>Make it a point to <b>do what you love</b> at least once a week. Or whenever you feel the need to. 
+                        Groove to delightful music, put on makeup even if you suck at it, go out on solo dates or hang out at the 
+                        mall or the arcade and play the same games you've grown up playing all over again. Discover new things about 
+                        yourself and keep the youthful twelve year old in you alive.</li><br>
+                        <li><b>Help your friends </b>out when you notice any red flags and try to establish a bond where they 
+                        do the same for you. Just keep each other sane through it all.</li><br>
+                    </ol></p><br>
+                    <div class="center">
+                    <a href="https://www.goodreads.com/book/show/33299465-you-asked-for-perfect" target="_blank">
+                        <img alt="You Asked for Perfect book cover-Front" src="blog4.1.jpg"></a>&nbsp;<a href="https://www.laurasilvermanwrites.com/book/perfect/" 
+                         style="margin-left: 1em; margin-right: 1em;" target="_blank"><img alt="You Asked for Perfect book c
+                         over- Back" src="blog4.2.jpg">
+                    </a>
+                    <p><blockquote><i>"Perfect is overrated."</i></blockquote></p>
+                    </div>
+                    <p>What are some effective ways in which you've tried to deal with academic pressure? Do share your views in 
+                    the comments below.&nbsp;</p>
+                    <p>Thank you folks and I'll be back with another post next week, stay tuned :)&nbsp;&nbsp;<br /></p>
+                    <div class="dropdown">
+                        <i class="fa fa-share-alt" style="font-size: 25px; cursor: pointer;"></i>
+                        <div class="dropdown-content">
+                        <a href="#">Copy Link</a>
+                        <a href="#">Facebook</a>
+                        <a href="#">E-Mail</a>
+                        </div>
+                      </div>
+                      <br>
+                </div>
+            </div> 
+            <div class="links" style="float: right; padding-right: 60px;">
+                <a href="#top"><i class="fa fa-arrow-circle-up" style="font-size:36px; float: right; padding:20px;"></i></a>
+            </div>
+        </div>
+        </div>
+        <script>
+            function openNav() {
+            document.getElementById("leftnav").style.width = "100%";
+            }
+            
+            function closeNav() {
+            document.getElementById("leftnav").style.width = "0";
+            }
+        </script>
+
+        <div class="footer">
+            <div class="footer footer-container">
+                <h3>Useful Links:</h3>
+                <div class="links">
+                    <p><a  href="home.html">> Home</a></p>
+                    <p><a href="blog.html">> Blogs</a></p>
+                    <p><a href="featured.html">> Featured</a></p>
+                    <p><a href="contact.html">> Contact</a></p>
+                </div>
+            </div>
+            <div class="footer footer-container">
+                <h3>Follow Me:</h3>
+                <a href="https://www.facebook.com/dishika.mehta.5/" target="_blank" class="fa fa-facebook"></a>
+                <a href="https://twitter.com/Dishika94051228" target="_blank" class="fa fa-twitter"></a>
+                <a href="https://www.tumblr.com/blog/andriel-foxes" target="_blank" class="fa fa-tumblr"></a>
+                <a href="https://www.linkedin.com/in/dishika-mehta-a303281a6" target="_blank" class="fa fa-linkedin"></a>
+                <a href="https://www.instagram.com/dishika_mehta/" target="_blank" class="fa fa-instagram"></a>
+                <h3>Connect via E-Mail:</h3>
+                <div class="links">
+                    <i style="font-size:24px" class="fa">&#xf0e0;</i><a style="display: inline;" href="mailto:dishikamehta@gmail.com"> dishikamehta@gmail.com</a>
+                </div>
+            </div>
+            <div class="footer footer-container">
+                <h3>Subscribe to Our Newsletter!</h3>
+                <p style="color: grey;">Thank you for visiting my blog-<i><span style="color: black;">'Auroras And Alluring Fiction'</span></i>. 
+                To stay updated on all blogs, subscribe to our weekly mails below:</p>
+                <p>E-Mail Address: <input type="email"><i style="font-size:20px" class="fa fa-paper-plane"></i></p>
+            </div>
+        </div>
+</body>
+</html>
